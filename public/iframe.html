@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+    <body>
+        <script>
+            var f = document.createElement('iframe')
+            // comment this line to fix
+            f.setAttribute('src', `javascript:"<!DOCTY1PE html><html><body></body></html>"`)
+            f.setAttribute('width', '750px')
+            f.setAttribute('height', '750px')
+            document.getElementsByTagName('body')[0].appendChild(f)
+            setTimeout(()=>{
+                fetch('/iframe2.html').then((response) => response.text()).then((data) => {
+                    f.contentWindow.document.write(data);
+                })
+            }, 1000)
+        </script>
+    </body>
+</html>
