@@ -1,10 +1,10 @@
 # iframe-blob-test
 
-#install
+# install
 npm i
 
-#build
+# build
 npm run build
 
-#run
+# run
 npm run preview
